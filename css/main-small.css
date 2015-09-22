@@ -1,0 +1,17 @@
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+
+  .full-welcome {
+    padding: 10% 0px 10% 0px
+  }
+
+  .btn {
+    width: auto;
+    display: inline;
+  }
+
+  .button-section a:first-child {
+    margin-right: 1em;
+  }
+}

@@ -1,0 +1,48 @@
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+
+  .post-box .description {
+    text-align: justify;
+  }
+
+  .page-content {
+    margin: 0px 10% 60px 10%;
+    padding: 20px 20px 0px 20px;
+  }
+
+  .welcome .page-content {
+    margin-top: -60px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+  }
+
+  .post-row {
+    display: inline-flex;
+  }
+
+  .post-box {
+    max-width: 300px;
+    margin: 10px 20px;
+    padding: 10px;
+  }
+
+  footer {
+    text-align: justify;
+  }
+
+  .footer {
+    display: inline-flex;
+  }
+
+  footer .footer .contact,
+  footer .footer .extra-info {
+    width: auto;
+  }
+
+  footer .extra-info {
+    margin-left: 40%;
+  }
+
+}
