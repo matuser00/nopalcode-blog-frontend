@@ -2,6 +2,18 @@
 @media (min-width: 768px) {
 
 
+  ul.menu li {
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    margin-right: 40px;
+    width: auto;
+  }
+
+  ul.menu li.hamburguer {
+    display: none;
+  }
+
   .full-welcome {
     padding: 10% 0px 10% 0px
   }

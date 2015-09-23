@@ -16,8 +16,12 @@ body {
 
 
 .full-welcome {
-  background-color: #8BC34A;
   padding: 3% 0px 0px 0px;
+  /* TODO: find a nice image */
+  /*background-image: url("../img/nopalcode-ico.gif");*/
+  /*background-repeat: no-repeat;
+  background-position: center;*/
+  background-color: #8BC34A;
 }
 
 .title {
@@ -147,18 +151,109 @@ input {
   margin-top: 1em;
   font-size: 1em;
   border: none;
+  line-height: 2em;
   border-bottom: 1px solid black;
+  background-color: transparent;
   /* TODO: find how to apply the fucking transitions! */
     -webkit-transition: line-height 11s ease;
     -moz-transition: line-height 11s ease;
     -o-transition: line-height 11s ease;
     -ms-transition: line-height 11s ease;
     transition: line-height 11s ease;
+    color:white;
 }
 
 input:focus {
   outline: 0;
-  line-height: 2em;
-  margin-top: 0px;
   border-bottom: 2px solid black;
+}
+
+/*
+  PLACEHOLDER COLOR ---- BEGINS
+  input placeholder color defined on different selectors
+  since some rendering motors would ignore the attributes when any of the
+  selectors on the list is not understood
+*/
+::-webkit-input-placeholder {
+   color: white;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: white;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: white;
+}
+
+:-ms-input-placeholder {
+   color: white;
+}
+/* PLACEHOLDER COLOR ---------- ENDS */
+
+input:focus::-webkit-input-placeholder {
+  font-size: 0.85em;
+}
+
+input:focus:-moz-placeholder { /* Firefox 18- */
+   font-size: 0.85em;
+}
+
+input:focus::-moz-placeholder {  /* Firefox 19+ */
+   font-size: 0.85em;
+}
+
+input:focus:-ms-input-placeholder {
+   font-size: 0.85em;
+}
+
+.search-icon {
+  margin-left: -30px;
+  vertical-align: -webkit-baseline-middle;
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  text-transform: capitalize;
+}
+
+ul.menu {
+  background-color: #8BC34A;
+  text-align: right;
+}
+
+
+ul.menu li {
+  list-style-type: none;
+  /*display: inline-block;*/
+  text-align: center;
+  margin-right: 40px;
+  display: none;
+}
+
+ul.menu li.hamburguer {
+  display: block;
+  font-size: larger;
+  line-height: 2em;
+  background-color: #388E3C;
+  cursor: pointer;
+}
+
+ul.menu li.hamburguer a {
+  color: white;
+  font-weight: bold;
+}
+
+ul.menu li {
+  width: 100%;
+  margin: 0px;
+  height: 40px;
+}
+
+ul.menu li input {
+  min-width: 200px;
 }
