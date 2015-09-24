@@ -328,10 +328,15 @@ ul.menu li input {
   border-radius: 50%;
   border: none;
   box-shadow: 3px 2px 14px black;
-  background-color: #03A9F4;
   width: 55px;
 }
 
-.btn-material:hover {
+/* TODO: support more button colors */
+
+.blue-btn {
+  background-color: #03A9F4;
+}
+
+.blue-btn:hover {
   background-color: #29B6F6;
 }
