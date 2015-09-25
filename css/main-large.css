@@ -18,21 +18,4 @@
     border-radius: 20px;
   }
 
-  footer {
-    text-align: justify;
-  }
-
-  .footer {
-    display: inline-flex;
-  }
-
-  footer .footer .contact,
-  footer .footer .extra-info {
-    width: auto;
-  }
-
-  footer .extra-info {
-    margin-left: 40%;
-  }
-
 }

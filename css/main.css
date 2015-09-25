@@ -148,7 +148,6 @@ body {
   Apply material design to input elements
 */
 input, textarea {
-  margin-top: 1em;
   font-size: 1em;
   border: none;
   line-height: 2em;
@@ -208,14 +207,6 @@ input:focus:-ms-input-placeholder {
    font-size: 0.85em;
 }
 
-.search-icon {
-  margin-left: -30px;
-  vertical-align: -webkit-baseline-middle;
-  background-color: transparent;
-  border: none;
-  display: inline-block;
-}
-
 ul {
   margin: 0px;
   padding: 0px;
@@ -227,19 +218,42 @@ ul.menu {
   text-align: right;
 }
 
+ul.menu.opened {
+  -webkit-transition-property: all;
+    -webkit-transition-duration: .5s;
+    -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    -moz-transition-property: all;
+    -moz-transition-duration: .5s;
+    -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    -ms-transition-property: all;
+    -ms-transition-duration: .5s;
+    -ms-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+ul.menu li a {
+  width: 100$;
+  display: block;
+  padding: 10px;
+  margin: 0px;
+}
 
 ul.menu li {
   list-style-type: none;
-  /*display: inline-block;*/
   text-align: center;
   margin-right: 40px;
   display: none;
 }
 
+ul.menu li.hamburguer-action {
+  display: block;
+}
+
 ul.menu li.hamburguer {
   display: block;
   font-size: larger;
-  line-height: 2em;
   background-color: #388E3C;
   cursor: pointer;
 }
@@ -255,8 +269,17 @@ ul.menu li {
   height: 40px;
 }
 
+ul.menu li a.search-icon {
+  margin-left: -30px;
+  vertical-align: -webkit-baseline-middle;
+  background-color: transparent;
+  border: none;
+  display: inline-flex;
+  padding: 0px;
+}
+
 ul.menu li input {
-  min-width: 200px;
+  /*min-width: 200px;*/
 }
 
 
@@ -273,8 +296,35 @@ ul.menu li input {
 }
 
 .comments .comment {
-  padding: 10px;
-  box-shadow: 0px 4px 15px black;
+  border-width: 0 0 3px 0;
+    -webkit-border-image:
+        -webkit-gradient(linear, 100% 0, 0 0, from(black), to(rgba(0, 0, 0, 0))) 100% 1;
+    -webkit-border-image:
+        -webkit-linear-gradient(top, black, rgba(0, 0, 0, 0)) 100% 1;
+    -o-border-image:
+             -o-linear-gradient(top, black, rgba(0, 0, 0, 0)) 100% 1;
+    -moz-border-image:
+           -moz-linear-gradient(top, black, rgba(0, 0, 0, 0)) 100% 1;
+}
+
+.comments .comment:last-child {
+  border: none;
+}
+
+.comments .comment:last-child:hover {
+  border: none;
+}
+
+.comments .comment:hover {
+  border-width: 0 0 3px 0;
+  -webkit-border-image:
+      -webkit-gradient(linear, 100% 0, 0 0, from(#646464), to(rgba(0, 0, 0, 0))) 100% 1;
+  -webkit-border-image:
+      -webkit-linear-gradient(top, #646464, rgba(0, 0, 0, 0)) 100% 1;
+  -o-border-image:
+           -o-linear-gradient(top, #646464, rgba(0, 0, 0, 0)) 100% 1;
+  -moz-border-image:
+         -moz-linear-gradient(top, #646464, rgba(0, 0, 0, 0)) 100% 1;
 }
 
 .comment .meta {
@@ -314,7 +364,7 @@ ul.menu li input {
 }
 
 .page-content.post {
-  margin: 0px 20px;
+  margin: 20px 20px 0px 20px;
   padding: 20px 20px 0px 20px;
   box-shadow: 0px 6px 14px black;
 }
