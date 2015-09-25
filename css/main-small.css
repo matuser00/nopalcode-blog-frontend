@@ -14,6 +14,10 @@
     display: none;
   }
 
+  ul.menu li.hamburguer-action {
+    display: inline-block;
+  }
+
   .page-content.post {
     margin: 40px 10% 0px 10%;
   }
